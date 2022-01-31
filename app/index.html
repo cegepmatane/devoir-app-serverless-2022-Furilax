@@ -2,15 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Hello World!</title>
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        <title>Écouteurs sans fil</title>
     </head>
-    <body style="background: white;">
-        <h1>Hello World!</h1>
-        <p>
-            We are using Node.js <span id="node-version"></span>,
-            Chromium <span id="chrome-version"></span>,
-            and Electron <span id="electron-version"></span>.
-        </p>
+
+    <body>
+
+        <div id="page-chargement-application">Chargement de l'application liste d'écouteurs</div>
+
+        <script type="plain/text" id="html-vue-liste-ecouteur">
+        <div class="page">
+            <h1>Liste des écouteurs</h1>
+            <a class="action" href="#ajouter-ecouteur">Ajouter des écouteurs</a>
+            <ul id="liste-ecouteur">
+            <li><a href="#ecouteur/{Ecouteur.id}" class="liste-ecouteur-item">{Ecouteur.nom}</a></li>
+            </ul>
+        </div>
+        </script>
     </body>
 </html>
