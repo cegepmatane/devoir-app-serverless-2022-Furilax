@@ -25,4 +25,17 @@ class Application {
           this.ecouteurDAO.chercher(idEcouteur, (ecouteur) => this.afficherNouveauCadeau(ecouteur));
         }
     }
+
+    afficherNouvelleListeEcouteur(listeEcouteur){
+
+        console.log(listeEcouteur);
+        this.vueListeEcouteur.initialiserListeEcouteur(listeEcouteur);
+        this.vueListeEcouteur.afficher();
+    }
+
+    afficherListeEcouteur(){
+        this.window.location.hash = "#";
+    }
 }
+
+new Application(window, new VueListeEcouteur(), new EcouteurDAO());
