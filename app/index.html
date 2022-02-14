@@ -45,6 +45,50 @@
               <p id="ecouteur-resistanceEau"></p>
               <a href="#" class="action">Revenir &agrave; la liste</a>
             </div>
-            </script>
+        </script>
+
+        <script type="plain/text" id="html-vue-ajouter-ecouteur">
+            <div class="page">
+              <h1>Ajouter des écouteurs sans fil</h1>
+              <form id="formulaire-ajouter">
+                <fieldset>
+                  <legend>Identification des écouteurs</legend>
+                  <div>
+                    <label for="ecouteur-nom">Nom</label>
+                    <input type="text" id="ecouteur-nom"/>
+                  </div>
+                  <div>
+                    <label for="ecouteur-marque">Marque</label>
+                    <input type="text" id="ecouteur-marque"/>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>D&eacute;tails sur les écouteurs</legend>
+                  <div>
+                    <label for="ecouteur-couleur">Couleur</label>
+                    <textarea id="ecouteur-couleur"></textarea>
+                  </div>
+                  <div>
+                    <label for="ecouteur-autonomie">Autonomie</label>
+                    <textarea id="ecouteur-autonomie"></textarea>
+                  </div>
+                  <div>
+                    <label for="ecouteur-reductionBruit">Réduction active de bruit</label>
+                    <textarea id="ecouteur-reductionBruit"></textarea>
+                  </div>
+                  <div>
+                    <label for="ecouteur-ecouteEnvironnement">Écoute de l'environnement</label>
+                    <textarea id="ecouteur-ecouteEnvironnement"></textarea>
+                  </div>
+                  <div>
+                    <label for="ecouteur-resistanceEau">Résistance à l'eau</label>
+                    <textarea id="ecouteur-resistanceEau"></textarea>
+                  </div>
+                </fieldset>
+                <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
+              </form>
+              <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
+            </div>
+        </script>
     </body>
 </html>
