@@ -24,4 +24,22 @@ class EcouteurDAO {
 
            });
     }
+    
+    chercher(id, action){
+        fetch("https://g8avul0bkg.execute-api.us-east-1.amazonaws.com/default/recherche-ecouteur-par-id" + '?id=' + id , {mode:'cors'})
+          .then(response => response.json())
+          .then(data =>
+            {
+              console.log(data);
+              let ecouteur = new Ecouteur(data.nom,
+                                        data.marque,
+                                        data.couleur,
+                                        data.autonomie,
+                                        data.reductionBruit,
+                                        data.ecouteEnvironnement,
+                                        data.resistanceEau,
+                                        data.id);
+              action(ecouteur);
+            });
+    }
 }

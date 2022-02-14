@@ -1,8 +1,9 @@
 class Application {
-    constructor(window, vueListeEcouteur, ecouteurDAO){
+    constructor(window, vueListeEcouteur, vueEcouteur, ecouteurDAO){
         this.window = window;
 
         this.vueListeEcouteur = vueListeEcouteur;
+        this.vueEcouteur = vueEcouteur;
         this.ecouteurDAO = ecouteurDAO;
 
 
@@ -22,7 +23,7 @@ class Application {
           let navigation = hash.match(/^#ecouteur\/([0-9]+)/);
           let idEcouteur = navigation[1];
     
-          this.ecouteurDAO.chercher(idEcouteur, (ecouteur) => this.afficherNouveauCadeau(ecouteur));
+          this.ecouteurDAO.chercher(idEcouteur, (ecouteur) => this.afficherNouveauEcouteur(ecouteur));
         }
     }
 
@@ -33,9 +34,15 @@ class Application {
         this.vueListeEcouteur.afficher();
     }
 
+    afficherNouveauEcouteur(ecouteur){
+        console.log(ecouteur);
+        this.vueEcouteur.initialiserEcouteur(ecouteur);
+        this.vueEcouteur.afficher();
+    }
+
     afficherListeEcouteur(){
         this.window.location.hash = "#";
     }
 }
 
-new Application(window, new VueListeEcouteur(), new EcouteurDAO());
+new Application(window, new VueListeEcouteur(), new VueEcouteur(), new EcouteurDAO());
