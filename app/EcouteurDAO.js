@@ -42,4 +42,22 @@ class EcouteurDAO {
               action(ecouteur);
             });
     }
+
+    ajouter(ecouteur, action){
+        fetch("https://paycix3r5g.execute-api.us-east-1.amazonaws.com/default/ajouter-ecouteur",
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type':'application/x-www-form-urlencoded'
+            },
+            body: "ecouteurjson=" + JSON.stringify(ecouteur),
+            mode:'cors',
+          })
+          .then(response => response.text())
+          .then(data =>
+            {
+              console.log('Détail:', data);
+              action();
+            });
+    }
 }

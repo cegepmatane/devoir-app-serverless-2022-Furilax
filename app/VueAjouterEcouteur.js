@@ -24,7 +24,7 @@ class VueAjouterEcouteur {
         let ecouteEnvironnement = document.getElementById("ecouteur-ecouteEnvironnement").value;
         let resistanceEau = document.getElementById("ecouteur-resistanceEau").value;
     
-        this.ajouterEcouteur(new Cadeau(nom, marque, couleur, autonomie, reductionBruit, ecouteEnvironnement, resistanceEau, null));
+        this.ajouterEcouteur(new Ecouteur(nom, marque, couleur, autonomie, reductionBruit, ecouteEnvironnement, resistanceEau, null));
     
       }
     
