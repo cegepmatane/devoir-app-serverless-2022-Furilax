@@ -1,7 +1,7 @@
 class EcouteurDAO {
 
     lister(action){
-        fetch("", {mode:'cors'})
+        fetch("https://utkwzwj35m.execute-api.us-east-1.amazonaws.com/default/lister-ecouteur", {mode:'cors'})
         .then(response => response.json())
         .then(data =>
            {
