@@ -2,6 +2,6 @@
 
 ## API Gateway
 
-- Lister : https://utkwzwj35m.execute-api.us-east-1.amazonaws.com/default/lister-ecouteur
+- Lister : https://0m089giwdd.execute-api.us-east-1.amazonaws.com/default/lister
 - Chercher par id : https://g8avul0bkg.execute-api.us-east-1.amazonaws.com/default/recherche-ecouteur-par-id
 - Ajouter : https://paycix3r5g.execute-api.us-east-1.amazonaws.com/default/ajouter-ecouteur
